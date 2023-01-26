@@ -1,4 +1,4 @@
-// import SimpleLightbox from "Simplelightbox";
+export { createGalleryMarkup };
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
@@ -32,12 +32,7 @@ export default async function createGalleryMarkup(hits) {
               </div> `;
               }));
     
-    gallery.insertAdjacentHTML('beforeend', markup);                                                   //Вставляет результат вызова шаблона
-    // const lightbox = new SimpleLightbox('.gallery a', {
-    //   captionsData: 'alt',
-    //   captionDelay: 250,
-    // });
-    // SimpleLightbox.refresh();
+    gallery.insertAdjacentHTML('beforeend', markup);                                             
     simpleLightbox();
 };
 

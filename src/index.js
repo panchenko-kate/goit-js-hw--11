@@ -1,5 +1,5 @@
 import NewApiService from "./js/api-service";
-// export { renderMarkup };
+
 import createGalleryMarkup from "./js/gallery-makup"
 import Notiflix from "notiflix";
 
@@ -66,5 +66,5 @@ async function onLoadMore() {
 };
 
 function clearList() {
-    gallery.innerHTML = "";
+    gallery.innerHTML = " ";
 }
