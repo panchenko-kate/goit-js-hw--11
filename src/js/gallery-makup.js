@@ -1,8 +1,8 @@
 // import SimpleLightbox from "Simplelightbox";
+// import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const gallery = document.querySelector('.gallery');
-// let galleryOpenModal = new SimpleLightbox('.gallery a');
 
 export default async function createGalleryMarkup(hits) {
     const markup = hits.map(
@@ -38,14 +38,15 @@ export default async function createGalleryMarkup(hits) {
     //   captionDelay: 250,
     // });
     // SimpleLightbox.refresh();
-    SimpleLightbox();
-    // scroll();  
+    simpleLightbox();
 };
 
-function SimpleLightbox() {
+function simpleLightbox() {
   let lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
   });
   lightbox.refresh();
 }
+
+

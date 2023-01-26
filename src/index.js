@@ -16,9 +16,9 @@ loadMoreBtn.addEventListener('click', onLoadMore);
 async function onSearch(e) {
     e.preventDefault();
 
-    if(!loadMoreBtn.hidden == true) {[
+    if(!loadMoreBtn.hidden == true) {
         loadMoreBtn.hidden = false
-    ]}
+    }
 
     newApiService.searchQuery = e.currentTarget.elements.searchQuery.value;
     newApiService.resetPage();
@@ -27,8 +27,7 @@ async function onSearch(e) {
         if(newApiService.searchQuery === '') {
           clearList();
           Notiflix.Notify.failure('Please enter your search data.');
-        }
-        else {
+        } else {
         loadMoreBtn.hidden = false;
         const response = await newApiService.makeRequest();
         const {
@@ -47,14 +46,13 @@ async function onSearch(e) {
         }
         loadMoreBtn.hidden = false;
       }
-
       } catch (err) {
       Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
       console.log(err.message);
 
       loadMoreBtn.hidden = true;
 }
-}
+};
 
 async function onLoadMore() {
     const response = await newApiService.makeRequest();

@@ -1,7 +1,5 @@
 import axios from "axios";
-// import Notiflix from "notiflix";
 
-// const input = document.querySelector('input');
 const loadMoreBtn = document.querySelector('.load-more');
 loadMoreBtn.hidden = true;
 
@@ -30,29 +28,6 @@ export default class NewApiService {
         // console.log(url);
         this.incrementPage();
         return await axios.get(url);
-
-
-        // if (this.searchQuery.length === 0) {
-        //     return;
-        // }
-
-        // try {
-        //     const response = await axios.get(url);
-        //     const totalHits =  await response.data.totalHits;
-        //     console.log(totalHits);
-        //     this.incrementPage();
-        //     if (this.per_page > totalHits) {
-        //         Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
-        //         loadMoreBtn.hidden = true;
-        //     // } else if (per_page < totalHits) {
-        //     //     loadMoreBtn.hidden = false;
-        //     }
-        //     console.log(response)
-        //     return response;
-
-        // } catch (err) {
-        //     console.log(err);
-        // }
     }
 
     incrementPage() {
@@ -62,11 +37,4 @@ export default class NewApiService {
     resetPage() {
         this.page = 1;
     }
-    // get query() {
-    //     return this.searchQuery;
-    // }
-
-    // set query(newQuery) {
-    //     this.searchQueary = newQuery;
-    // }
 }
