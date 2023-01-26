@@ -69,8 +69,14 @@ input {
 }
 
 .info {
+    padding-left: 15px;
+    padding-right: 15px;
     display: flex;
     text-align: center;
+}
+
+.info-item {
+    flex-direction: column;
 }
 
 .load-more {
@@ -83,4 +89,12 @@ input {
     color: #fff;
     cursor: pointer;
     font-size: 14px;
+}
+
+.load-more:hover {
+    background-color: #3b76ad;
+}
+
+.is-hidden {
+    display: none;
 }
