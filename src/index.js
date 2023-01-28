@@ -67,7 +67,7 @@ async function onLoadMore(e) {
       loadMoreBtn.style.display = "none";
     } else
       createGalleryMarkup(hits); 
-      loadMoreBtn.style.display = "none";
+      // loadMoreBtn.style.display = "none";
 };
 
 function clearList() {

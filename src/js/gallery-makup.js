@@ -35,11 +35,6 @@ export default async function createGalleryMarkup(hits) {
     
     gallery.insertAdjacentHTML('beforeend', markup);                                             
     simpleLightbox();
-    console.log(hits)
-
-    if (hits.length < 40) {
-      loadMoreBtn.style.display = "none";
-    }
 };
 
 function simpleLightbox() {
