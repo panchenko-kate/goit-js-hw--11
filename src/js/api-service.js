@@ -9,8 +9,8 @@ const API_KEY = `33000427-89fe7bf8f999bb2d1ca661cd2`;
 export default class NewApiService {
     constructor() {
         this.searchQuery = '';
-        this.perPage = 40;
         this.page = 1;
+        this.cardsCount = this.per_page;
     };
 
     async makeRequest() {
@@ -20,8 +20,9 @@ export default class NewApiService {
             image_type: 'photo',
             orientation: 'horizontal',
             safesearch: true,
-            page: this.pageAmount,
-            per_page: this.perPage,
+            per_page: 40,
+            page: this.page,
+            cardsCount: this.per_page,
         });
 
         const url = `${BASE_URL}/?${params}`;
@@ -31,7 +32,7 @@ export default class NewApiService {
     }
 
     incrementPage() {
-        this.page += 1;
+        this.page +=1;
     }
 
     resetPage() {
