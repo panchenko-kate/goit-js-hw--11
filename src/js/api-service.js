@@ -10,7 +10,6 @@ export default class NewApiService {
     constructor() {
         this.searchQuery = '';
         this.page = 1;
-        this.cardsCount = this.per_page;
     };
 
     async makeRequest() {
@@ -22,7 +21,6 @@ export default class NewApiService {
             safesearch: true,
             per_page: 40,
             page: this.page,
-            cardsCount: this.per_page,
         });
 
         const url = `${BASE_URL}/?${params}`;
